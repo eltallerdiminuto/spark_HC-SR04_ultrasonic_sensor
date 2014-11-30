@@ -14,10 +14,10 @@ http://docs.spark.io/cli/
 
 Wiring:
 
-    Spark pin GND --> GND
-    Spark pin VIN --> VCC !! VIN NOT 3V3 !!
-    Spark D2 --> TRIG
-    Spark D4 --> ECHO
+    Spark pin GND --> HC-SR04 GND
+    Spark pin VIN --> HC-SR04 VCC !! Spark VIN NOT Spark 3V3 !!
+    Spark D2      --> HC-SR04 TRIG
+    Spark D4      --> HC-SR04 ECHO
 
     Also:
 
@@ -38,3 +38,6 @@ To flash it to your core:
 
   Using USB (core must be in dfu mode - http://docs.spark.io/connect/#appendix-dfu-mode-device-firmware-upgrade)
   spark flash <your-core-id-here> HC-SR04.ino
+
+
+TODO: Separate pulseIn function in a library
